@@ -21,7 +21,23 @@ The system extracts multiple review quality signals using multiple pretrained mo
 
 ## 🚀 Quick Start
 
-## 0️⃣ Expert Annotated Dataset
+## 1️⃣ Clone and Setup
+
+```bash
+git clone https://github.com/Reviewerly-Inc/ReviewerlyMonitor.git
+cd ReviewerlyMonitor
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## 2️⃣ Install Dependencies
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## 3️⃣ Expert Annotated Dataset
 In this section, we provide detailed instructions on how to download the dataset and a sample of the raw data.
 
 ### How to Download the Data
@@ -73,23 +89,7 @@ Here's a sample data from Expert Annotated Dataset.
 }
 ```
 
-## 1️⃣ Clone and Setup
-
-```bash
-git clone https://github.com/Reviewerly-Inc/ReviewerlyMonitor.git
-cd ReviewerlyMonitor
-python3 -m venv venv
-source venv/bin/activate
-```
-
-## 2️⃣ Install Dependencies
-
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-## 3️⃣ Launch the API
+## 4️⃣ Launch the API
 
 ```bash
 uvicorn app.main:app --reload
