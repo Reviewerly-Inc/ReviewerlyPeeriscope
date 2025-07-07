@@ -21,7 +21,59 @@ The system extracts multiple review quality signals using multiple pretrained mo
 
 ## 🚀 Quick Start
 
-### 1️⃣ Clone and Setup
+## 0️⃣ Expert Annotated Dataset
+In this section, we provide detailed instructions on how to download the dataset and a sample of the raw data.
+
+### How to Download the Data
+Note: You need to install the gdown package to download the dataset.
+```bash
+pip install gdown
+```
+
+If you already have the gdown package installed, you can use the following commands to download the dataset:
+```bash
+cd human-annotation-data/
+gdown --folder https://drive.google.com/drive/folders/14zWD3G_z_1gXDLEAkI7lz3KK3NHkAH8w?usp=sharing
+```
+
+### Sample of the Raw Data
+Here's a sample data from Expert Annotated Dataset.
+```json
+{
+    "paper_id": "120",
+    "submitted_at": "2025-05-16T14:44:27.215679",
+    "metrics": {
+        "review_Peter-W.-Glynn_Comprehensiveness": 1,
+        "review_Peter-W.-Glynn_Usage_of_Technical_Terms": 4,
+        "review_Peter-W.-Glynn_Factuality": "partially factual",
+        "review_Peter-W.-Glynn_Sentiment_Polarity": "neutral",
+        "review_Peter-W.-Glynn_Politeness": "polite",
+        "review_Peter-W.-Glynn_Vagueness": "moderate",
+        "review_Peter-W.-Glynn_Objectivity": 3,
+        "review_Peter-W.-Glynn_Fairness": 3,
+        "review_Peter-W.-Glynn_Actionability": 4,
+        "review_Peter-W.-Glynn_Constructiveness": 4,
+        "review_Peter-W.-Glynn_Relevance_Alignment": 3,
+        "review_Peter-W.-Glynn_Clarity_and_Readability": 4,
+        "review_Peter-W.-Glynn_Overall_Quality": 70,
+        "review_Ciemon-Frank-Caballes_Comprehensiveness": 0,
+        "review_Ciemon-Frank-Caballes_Usage_of_Technical_Terms": 4,
+        "review_Ciemon-Frank-Caballes_Factuality": "unfactual",
+        "review_Ciemon-Frank-Caballes_Sentiment_Polarity": "neutral",
+        "review_Ciemon-Frank-Caballes_Politeness": "polite",
+        "review_Ciemon-Frank-Caballes_Vagueness": "high",
+        "review_Ciemon-Frank-Caballes_Objectivity": 2,
+        "review_Ciemon-Frank-Caballes_Fairness": 3,
+        "review_Ciemon-Frank-Caballes_Actionability": 1,
+        "review_Ciemon-Frank-Caballes_Constructiveness": 1,
+        "review_Ciemon-Frank-Caballes_Relevance_Alignment": 2,
+        "review_Ciemon-Frank-Caballes_Clarity_and_Readability": 3,
+        "review_Ciemon-Frank-Caballes_Overall_Quality": 2
+    }
+}
+```
+
+## 1️⃣ Clone and Setup
 
 ```bash
 git clone https://github.com/Reviewerly-Inc/ReviewerlyMonitor.git
@@ -30,14 +82,14 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 2️⃣ Install Dependencies
+## 2️⃣ Install Dependencies
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Launch the API
+## 3️⃣ Launch the API
 
 ```bash
 uvicorn app.main:app --reload
@@ -66,6 +118,7 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
 
 ```bash
 RottenReviewsAPI/
+  ├── human-annotation-data/
   ├── app/
   │   ├── analyzer.py
   │   ├── main.py
