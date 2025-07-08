@@ -7,7 +7,7 @@ The system extracts multiple review quality signals using multiple pretrained mo
 
 ## 🚀 Quick Start
 
-## ✨ Features
+## Features
 * ✅ **MATTR (Lexical Diversity)** — using `taaled` and `pylats`
 * ✅ **Sentiment Polarity** — using `TextBlob`
 * ✅ **Politeness Score** — using `xlm-roberta-large-tydip`
@@ -71,7 +71,7 @@ Here's a sample data from Expert Annotated Dataset.
 }
 ```
 
-## 4️⃣ Launch the API
+## Launch the API
 
 ```bash
 uvicorn app.main:app --reload
@@ -82,7 +82,7 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
 ---
 
 
-## ✅ API Example Request
+## API Example Request
 ```json
 {
   "title": "Paper Title",
