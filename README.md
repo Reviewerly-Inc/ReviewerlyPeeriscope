@@ -1,9 +1,61 @@
 # PeeriScope
 
-A modular FastAPI-based API to automatically analyze scientific paper reviews.
-The system extracts multiple review quality signals using multiple pretrained models.
+A modular FastAPI-based API to automatically analyze scientific paper reviews. The system extracts multiple review quality signals using multiple pretrained models.
 
 ---
+
+## API Explanation
+ONE LINE EXPLAIN IT HAS 2 MODES AND WHAT IT IS
+
+## Launch the API
+```bash
+uvicorn app.main:app --reload
+```
+
+Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API documentation.
+
+---
+
+
+## API Example Request - Manual Mode
+```json
+{
+  "title": "Paper Title",
+  "abstract": "Paper abstract here...",
+  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
+}
+```
+
+## API Example Response - Manual Mode
+```json
+{
+  "title": "Paper Title",
+  "abstract": "Paper abstract here...",
+  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
+}
+```
+
+## API Example Request - OpenReview
+```json
+{
+  "title": "Paper Title",
+  "abstract": "Paper abstract here...",
+  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
+}
+```
+
+## API Example Response - OpenReview
+```json
+{
+  "title": "Paper Title",
+  "abstract": "Paper abstract here...",
+  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
+}
+```
+
+
+
+
 
 ## 🚀 Quick Start
 
@@ -68,26 +120,6 @@ Here's a sample data from Expert Annotated Dataset.
         "review_Ciemon-Frank-Caballes_Clarity_and_Readability": 3,
         "review_Ciemon-Frank-Caballes_Overall_Quality": 2
     }
-}
-```
-
-## Launch the API
-
-```bash
-uvicorn app.main:app --reload
-```
-
-Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API documentation.
-
----
-
-
-## API Example Request
-```json
-{
-  "title": "Paper Title",
-  "abstract": "Paper abstract here...",
-  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
 }
 ```
 
