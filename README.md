@@ -141,18 +141,6 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
 }
 ```
 
-## Features
-* ✅ **MATTR (Lexical Diversity)** — using `taaled` and `pylats`
-* ✅ **Sentiment Polarity** — using `TextBlob`
-* ✅ **Politeness Score** — using `xlm-roberta-large-tydip`
-* ✅ **Question Count** — using `bert-mini-finetune-question-detection`
-* ✅ **Citation Count** — using regex-based citation detection
-* ✅ **Semantic Similarity** — using `allenai/specter`
-* ✅ **Readability Score** — using `textstat` (Flesch Reading Ease)
-* ✅ **Hedging Labels** — using `jeniakim/hedgehog` model
-* ✅ **Explicit References** — detecting "section", "figure", etc.
-
-
 ## Expert Annotated Dataset
 In this section, we provide detailed instructions on how to download the dataset and a sample of the raw data.
 
