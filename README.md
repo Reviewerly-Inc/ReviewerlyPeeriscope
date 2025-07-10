@@ -5,7 +5,7 @@ A modular FastAPI-based API to automatically analyze scientific paper reviews. T
 ---
 
 ## API Explanation
-ONE LINE EXPLAIN IT HAS 2 MODES AND WHAT IT IS
+PeeriScope provides three easy-to-use API endpoints to fit your workflow. The **Manual API** lets you submit a paper’s title and abstract, the text of a review, and optional reviewer details so it can compute a suite of quantifiable quality metrics. The **LLM API** accepts the same inputs but leverages large language models to deliver deeper, context-aware analysis of each review. And the **OpenReview API** requires only the URL of an OpenReview submission—it automatically retrieves every reviewer report for that manuscript and runs the full suite of quality assessments on them.
 
 ## Launch the API
 ```bash
