@@ -49,7 +49,24 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
   "general_alignment": 0,
   "in_depth_alignment": 0,
   "recency_alignment": 0,
-  "predicted_overall_quality_score": 0,
+  "predicted_overall_quality_score": 0
+}
+```
+
+## API Example Request - Manual Mode LLM
+```json
+{
+  "review": "string",
+  "title": "string",
+  "abstract": "string",
+  "reviewer_openalex_id": "string",
+  "reviewer_name": "string"
+}
+```
+
+## API Example Response - Manual Mode LLM
+```json
+{
   "comprehensiveness": 0,
   "usage_of_technical_terms": 0,
   "factuality": "string",
@@ -62,25 +79,65 @@ Visit: [http://localhost:8000/docs](http://localhost:8000/docs) for interactive 
   "constructiveness": 0,
   "relevance_alignment": 0,
   "clarity_and_readability": 0,
-  "overall_quality": 
+  "overall_quality": 0
 }
 ```
+
 
 ## API Example Request - OpenReview
 ```json
 {
-  "title": "Paper Title",
-  "abstract": "Paper abstract here...",
-  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
+  "url": "string"
 }
 ```
 
 ## API Example Response - OpenReview
 ```json
 {
-  "title": "Paper Title",
-  "abstract": "Paper abstract here...",
-  "review": "The methodology is sound. However, see Figure 3. Is the experiment reproducible?"
+  "analysis_results": [
+    {
+      "quantifiable_analysis": {
+        "review_length": 0,
+        "mattr_score": 0,
+        "question_count": 0,
+        "citation_count": 0,
+        "sentiment_score": 0,
+        "politeness_score": 0,
+        "similarity_score": 0,
+        "readability_score": 0,
+        "hedging_score": 0,
+        "explicit_reference_count": 0,
+        "reviewer_openalex_id": "string",
+        "reviewer_name": "string",
+        "reviewer_citation_count": 0,
+        "reviewer_h_index": 0,
+        "reviewer_academic_career_length": 0,
+        "general_alignment": 0,
+        "in_depth_alignment": 0,
+        "recency_alignment": 0,
+        "predicted_overall_quality_score": 0
+      },
+      "llm_analysis": {
+        "comprehensiveness": 0,
+        "usage_of_technical_terms": 0,
+        "factuality": "string",
+        "sentiment_polarity": "string",
+        "politeness": "string",
+        "vagueness": "string",
+        "objectivity": 0,
+        "fairness": 0,
+        "actionability": 0,
+        "constructiveness": 0,
+        "relevance_alignment": 0,
+        "clarity_and_readability": 0,
+        "overall_quality": 0
+      },
+      "review_text": "string",
+      "reviewer_name": "string"
+    }
+  ],
+  "paper_title": "string",
+  "paper_abstract": "string"
 }
 ```
 
